@@ -43,7 +43,7 @@ def explain_model(model, X_train):
         <div style="text-align: center;">
             <img src="data:image/jpg;base64,{}" alt="ConfusionMatrix" width="600">
         </div>
-        """.format(convert_image_to_base64("C:/Users/Hadi/Desktop/ConfusionMatrix.jpg")),
+        """.format(convert_image_to_base64("ConfusionMatrix.jpg")),
         unsafe_allow_html=True
     )
 
@@ -392,7 +392,7 @@ def batch_prediction():
             pivot_table = results_df.pivot_table(index=['Prediction'], values=['Count'], aggfunc='count')
             
             # Display the count of each prediction
-            st.write("Summary of Batch Predictions (Pivot Table):")
+            st.write("Summary of Batch Predictions:")
             st.dataframe(pivot_table)
             
             # Exclude the log-transformed columns from the detailed view
